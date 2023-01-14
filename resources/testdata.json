@@ -1,0 +1,69 @@
+[{
+	"param": {
+		"s": "2016-01-01 02:03:22"
+	},
+  "expected_status":200,
+  "expected_data":"1451613802",
+	"test_failed_message": "Test convert from date string to unix timestamp failed"
+},
+	{
+	"param": {
+		"s": "01-01-2016 02:03:22"
+	},
+  "expected_status":200,
+  "expected_data":"1451613802",
+	"test_failed_message": "Test convert date to timestamp using different date format DD-MM-YYYY failed"
+},
+	{
+	"param": {
+		"s": "01-01-201 02:03:22"
+	},
+  "expected_status":200,
+  "expected_data":"Invalid year",
+	"test_failed_message": "Test convert date to timestamp using invalid year failed"
+},
+	{
+	"param": {
+		"s": "14-01-2016 02:03:22"
+	},
+  "expected_status":200,
+  "expected_data":"Invalid month or day",
+	"test_failed_message": "Test convert date to timestamp using invalid month/day failed"
+},
+	{
+	"param": {
+		"s": "01-01-2016 87:03:22"
+	},
+  "expected_status":200,
+  "expected_data":"Invalid time",
+	"test_failed_message": "Test convert date to timestamp using invalid time failed"
+},
+	{
+	"param": {
+		"s": "567369408162358558"
+	},
+  "expected_status":200,
+  "expected_data":"Invalid unix time stamp",
+	"test_failed_message": "Test convert unix timestamp to date using invalid unix timestamp failed"
+},
+
+	{
+	"param": {
+		"s": "1451613802"
+	},
+  "expected_status":200,
+  "expected_data":"2016-01-01 02:03:22",
+	"test_failed_message": "Test convert from unix timestamp to date format failed"
+},
+{
+	"param": {
+		"s": "abcdef"
+	},
+  "expected_status":200,
+  "expected_data":"false",
+	"test_failed_message": "Test invalid date string failed"
+}
+
+
+
+]
