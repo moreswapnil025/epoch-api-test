@@ -30,7 +30,7 @@ pip install -U pytest
 pip install requests
 ```
 
- __Install Json Allure pytest__:
+ __Install Allure pytest__:
 ```sh
 pip install allure-pytest
 ```
@@ -40,7 +40,7 @@ __To run a test and generate report files, you can simply write the following co
 ```sh
 pytest --alluredir=<path to report directory> 
 ```
-or 
+or __To run a tests you can simply write the following command on Terminal__:
 
 ```sh
 pytest
